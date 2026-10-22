@@ -1,48 +1,64 @@
 
 
+using System.Security.Cryptography;
+
 class Gameloop
 {
 // Eigenschaften
 public int Day {get; set;}
 int Ergebnis {get; set;}
+ Player player = new(); // Spielerobjekt erstellt // Neue Schreibweiß
+
 
 //Methoden
- public void MainLoop() // Die eigentliche Spiellogik
+ public void Einleitung() // Die Einleitung ins Spiel
     {
-        Player player = new(); // Spielerobjekt erstellt // Neue Schreibweiße!
-        Day = 7;
+       
+        player.Startwerte();
         
         
         // Einleitung
         Console.Clear();
         Console.WriteLine("... Loading");
-
-        System.Threading.Thread.Sleep(1500); 
-        System.Console.WriteLine("Drücke enter..");
-        Console.ReadKey();
+        System.Threading.Thread.Sleep(2000); 
+        Enter();
         System.Console.WriteLine("... Du wachst auf, alles ist noch verschwommen und unklar");
         Enter();
         System.Console.WriteLine("Du setzt dich auf und reibst deine Augen");
         Enter();
-        System.Console.WriteLine("");
-        System.Console.WriteLine("Uff, schon wieder ein neuer Tag, Zeit um raus zu gehen");
+        System.Console.WriteLine("Was möchtest du tun ??");
         
-        while (true)
-        {
-            
-            
-            //gerade leer
+
+
+        // hier neuer Methodenaufruf
 
 
 
-        }
+
+
+
+
+
+
+        // kleine Hilfsmethode
         static void Enter()
         {
-            System.Console.WriteLine("Enter");
+            System.Console.WriteLine("Press Enter..");
             Console.ReadKey();
 
         }
     }
+
+
+
+    public void Auswahl()
+    {
+        System.Console.WriteLine("{0}", Day);
+        player.Startwerte();
+        
+    }
+
+
 
     public void Daycount()
     {
@@ -67,10 +83,6 @@ int Ergebnis {get; set;}
         }
 
     }
-
-    
-
-
 
 
 }

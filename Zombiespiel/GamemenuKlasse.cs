@@ -1,5 +1,7 @@
 
 
+using System.Xml;
+
 class Gamemenu
 {
     // Eigenschaften
@@ -15,18 +17,18 @@ class Gamemenu
         Console.WriteLine("Starten(1)");
         Console.WriteLine("Anleitung(2)");
         Console.WriteLine("Beenden(3)");
-        Console.Write("Gebe eine Zahl ein: ");
-        string? userinput = Console.ReadLine(); // hier wird der string gespeichert 
 
         while (true)
         {
+            Console.Write("Gebe eine Zahl ein: ");
+            string? userinput = Console.ReadLine(); // hier wird der string gespeichert 
             if (int.TryParse(userinput, out int auswahl)) // falls es umwandelbar ist wird true zurückgegeben und der String wird in einen int umgewandelt
             // wenn nciht true dann wird der if block übersprungen. 
             {
                 switch(auswahl)
                 {
                     case (1):
-                        Loop.MainLoop();
+                        Loop.Einleitung();
                         break;
                         
                     case (2):
@@ -41,6 +43,7 @@ class Gamemenu
                         break;
                             
                 }  
+                break;
             }
             else 
             {
@@ -54,7 +57,7 @@ class Gamemenu
     }
     public void Anleitung()  // Die optionale Spieleanleitug
     {
-        Console.WriteLine(" Du Spielst einen alten Mann in einem viel zu kleinen Bunker und musst ums überleben kämpfen.");
+        Console.WriteLine(" Du Spielst einen Überlebenden in einem viel zu kleinen Bunker und musst ums überleben kämpfen.");
         Console.WriteLine(" Am Anfange des Spiels hast du 20 Sättigung und 20 Energie. Eine Aktion kostet einen ganzen Tag. Du hast die Wahl zwischen raus gehen oder schlafen. Schlaf füllt deine Energie auf und rausgehen deinen Hunger. Rausgehen ist wohl das interessanteste. aber auch die teuerste Aktion. Behalte deine Werte gut im Blick. Möglicherweiße triffst du auf einen anderen überlebenden oder Zombie und musst kämpfen. Kämpfen kostet Energie.Für jeden Hit -5");
         Console.WriteLine();
         Console.WriteLine("Tipp! Überall sind Katzen versteckt :3");
@@ -70,9 +73,9 @@ class Gamemenu
                 break;
         
             }
-            
+            break;
         }    
-        Mainmenu();
+        
     }
     
     public void Beenden()
@@ -97,9 +100,9 @@ class Gamemenu
                 Console.WriteLine("Eingabe ungültig");
                 break;
             }
-            
+            break;
         }
-        Mainmenu();
+        
     }
 
    

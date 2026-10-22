@@ -8,16 +8,27 @@ class Player
     public int Energie_wert { get; set; }
 
 
-    public void Startwerte()
+    public void Hunger()
     {
         
         Hunger_wert = 20;
-        Energie_wert = 20;
-
-        Console.WriteLine("Hunger:{0}", Hunger_wert);
-        Console.WriteLine("Energie:{0}", Energie_wert);
+        
 
     }
+
+    public void Energie()
+    {
+        Energie_wert = 20;
+
+    }
+
+
+    // Hilfsmethode
+    public void Startwerte()
+        {
+            System.Console.WriteLine("{0}", Hunger_wert);
+            System.Console.WriteLine("{0}", Energie_wert);
+        }
 
 
     
