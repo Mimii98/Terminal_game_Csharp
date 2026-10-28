@@ -1,9 +1,10 @@
+ using static System.Console;
 
 class Player
 {  
     // Eigenschaften
     
-
+    
     public int Hunger_wert { get; set; }
     public int Energie_wert { get; set; }
 
@@ -11,14 +12,14 @@ class Player
     public void Hunger()
     {
         
-        Hunger_wert = 20;
+        Hunger_wert = 50;
         
 
     }
 
     public void Energie()
     {
-        Energie_wert = 20;
+        Energie_wert = 50;
 
     }
 
@@ -26,8 +27,7 @@ class Player
     // Hilfsmethode
     public void Startwerte()
         {
-            System.Console.WriteLine("{0}", Hunger_wert);
-            System.Console.WriteLine("{0}", Energie_wert);
+            WriteLine("""Hunger:{0}    Energie{1}""", Hunger_wert, Energie_wert);
         }
 
 

@@ -1,58 +1,36 @@
+ using static System.Console;
 
 class Gameloop
 {
-// Eigenschaften
-public int Day {get; set;}
 int Ergebnis {get; set;}
- Player player = new(); // Spielerobjekt erstellt // Neue Schreibweiß
-
+private Player player = new();// Spielerobjekt erstellt // Neue Schreibweiß
 
 //Methoden
- public void Einleitung() // Die Einleitung ins Spiel
+ public void Intro() // Die Einleitung ins Spiel
     {
-       
-        player.Startwerte();
-        
-        
         // Einleitung
-        Console.Clear();
-        Console.WriteLine("... Loading");
-        System.Threading.Thread.Sleep(2000); 
-        Enter();
-        Console.Clear();
-        System.Console.WriteLine("... Du wachst auf, alles ist noch verschwommen und unklar");
-        Enter();
-        System.Console.WriteLine("Du setzt dich auf und reibst deine Augen");
-        Enter();
-        System.Console.WriteLine("Was möchtest du tun ??");
+        Clear();
+        WriteLine("... Loading");
+        System.Threading.Thread.Sleep(3000); 
+        WriteLine("""Du wachst in einer dunklen Gasse auf.Dein Kopf dröhnt und die Erinnerungen von letzter Nacht kommen dir wieder in den Kopf. Du siehst deine Frau wie sie dich anschreit und Gegenstände nach dir wirft. Sie beschuldigt dich, dass sie fremdgehen musste, weil du ein Versager und Idiot bist der nichts hinbekommt.""");
+        System.Threading.Thread.Sleep(1000);
+        WriteLine();
+        WriteLine("Nun sitzt du da auf dem Boden, im Nassen wie ein Opfer und ohne Hose ᓚᘏᗢ. ");
         
-
-
         Auswahl();
         
-
-
-        // kleine Hilfsmethode
-        static void Enter()
-        {
-            System.Console.WriteLine("Press Enter..");
-            Console.ReadKey();
-
-        }
     }
 
 
-    // Noch volle Katastrophe haha :D 
     public void Auswahl()
     {
-        System.Console.WriteLine("{0}", Day); // zeigt nur 0, 0, 0 an huh ?
         player.Startwerte();
-        System.Console.WriteLine("");
-        System.Console.WriteLine("Rausgehen(1)");
-        System.Console.WriteLine("Schalfen(2)");
-        System.Console.WriteLine("***WÄHLE AUS***: ");
-        string? userpick = Console.ReadLine();
-        if (int.TryParse(userpick, out int pick));
+        WriteLine("");
+        WriteLine("Rausgehen(1)");
+        WriteLine("Schalfen(2)");
+        WriteLine("***WÄHLE AUS***: ");
+        string? userpick = ReadLine();
+        if (int.TryParse(userpick, out int pick))
         {
             //switch(pick)
             {
@@ -67,30 +45,6 @@ int Ergebnis {get; set;}
             }
         }
         
-    }
-
-
-
-    public void Daycount()
-    {
-        
-        MinusDay();
-        Console.WriteLine("{0}", Ergebnis);
-
-        int MinusDay()
-        {
-            // hier muss nochmal nachgeschaut werden hahahaaha :D 
-            int zahl = 1;
-            Ergebnis = Day - zahl ;
-            Ergebnis = Day;
-            if (Day == 0)
-            {
-                //Spiel vorbei. Das kläre ich später wenn der rest steht. dann kann ich besser sehen wie ich das umsetzen. 
-            }
-            return Ergebnis;
-
-        }
-
     }
 
 
