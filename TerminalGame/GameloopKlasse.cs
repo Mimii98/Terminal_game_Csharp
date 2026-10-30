@@ -3,7 +3,7 @@
 class Gameloop
 {
 int Ergebnis {get; set;}
-private Player player = new();// Spielerobjekt erstellt // Neue Schreibweise
+public Player player = new();// Spielerobjekt erstellt // Neue Schreibweise
 
 
 //Methoden
@@ -32,12 +32,17 @@ private Player player = new();// Spielerobjekt erstellt // Neue Schreibweise
         {   
             ReadKey();
             Clear();
-            WriteLine("{0}",player.Day);
+            WriteLine("Tag {0}",player.Day);
             Hilfsklasse.Status(player);
             WriteLine("");
-            WriteLine("Rumlungern(1)");
+            WriteLine("Hosensuche(1)");
+            WriteLine("-15 Hunger -25 Energie");
+            WriteLine();
             WriteLine("Essen suchen(2)");
+            WriteLine("-15 Hunger -25 Energie");
+            WriteLine();
             WriteLine("Schlafen(3)");
+            WriteLine();
             WriteLine("***WÄHLE AUS***");          
             string? userpick = ReadLine();
         
@@ -48,21 +53,21 @@ private Player player = new();// Spielerobjekt erstellt // Neue Schreibweise
                     switch(pick)
                     {
                     case (1):
-                            EventKlasse.Stromern(player);
+                            EventKlasse.Hosensuche(player);
                             break;
 
                     case (2):
-                            EventKlasse.EssenSuchen(player);
+                            EventEssensuchen.EssenSuchen(player);
                             break;
                         
                     case (3):
-                            EventKlasse.Schlafen(player);
+                            EventSchlafen.Schlafen(player);
                             break;
 
 
                     }
                     Hilfsklasse.IsGameover(player);
-                    player.DayCount();
+                    
                     
                 
                 
