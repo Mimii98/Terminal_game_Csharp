@@ -9,8 +9,8 @@ class Program
         WriteLine("Take a seat and have fun lol ");
         ReadKey();
         
-        Gamemenu menu = new(); // Neue Schreibweiße um ein Objekt zu erzeugen.
-        menu.Mainmenu(); // Hier rufen wir die Menumethode auf damit wir erstmal im Menü landen.
+        Gamemenu menu = new(); // Neue Schreibweise um ein Objekt zu erzeugen.
+        menu.Mainmenu(); // Hier rufen wir die Menümethode auf, damit wir erstmal im Menü landen.
 
     }
 

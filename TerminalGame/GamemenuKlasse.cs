@@ -1,5 +1,8 @@
  using static System.Console;
 
+// Fertig so
+
+
 class Gamemenu
 {
     // Eigenschaften
@@ -11,17 +14,17 @@ class Gamemenu
      public void Mainmenu()
     { 
         Clear();
-        Gameloop Loop = new(); // Erstellen eines GameLoop Objekts damit ich Methoden aus der Klasse nutzen kann. 
+        Gameloop Loop = new(); // Erstellen eines GameLoop-Objekts, damit ich Methoden aus der Klasse nutzen kann. 
         WriteLine("Starten(1)");
         WriteLine("Anleitung(2)");
         WriteLine("Beenden(3)");
 
         while (true)
         {
-            Write("Gebe eine Zahl ein: ");
+            WriteLine("***WÄHLE AUS***");
             string? userinput = ReadLine(); // hier wird der string gespeichert 
-            if (int.TryParse(userinput, out int auswahl)) // falls es umwandelbar ist wird true zurückgegeben und der String wird in einen int umgewandelt
-            // wenn nciht true dann wird der if block übersprungen. 
+            if (int.TryParse(userinput, out int auswahl)) // falls es umwandelbar ist, wird true zurückgegeben und der String wird in einen int umgewandelt
+            // wenn nicht true, dann wird der if-Block übersprungen. 
             {
                 switch(auswahl)
                 {
@@ -53,10 +56,10 @@ class Gamemenu
         }
         
     }
-    public void Anleitung()  // Die optionale Spieleanleitug
+    public void Anleitung()  // Die optionale Spielanleitung
     {
         WriteLine("Ziel des Spiels:");
-        WriteLine("Ziel ist es deine Hose wiederzufinden. Erst dann bist du bereit dich um einen Job und um eine Bleibe zu kümmern. Ohne Hose nimmt dich doch keiner Ernst Bruder");
+        WriteLine("Ziel ist es, deine Hose wiederzufinden. Erst dann bist du bereit, dich um einen Job und um eine Bleibe zu kümmern. Ohne Hose nimmt dich doch keiner ernst, Bruder");
         Hilfsklasse.Zeilenumbruch();
 
 
@@ -95,7 +98,7 @@ class Gamemenu
             {
                 break;
             }
-            else // ein vielleicht case gibts noch nicht. vielleicht durch einen switchblock ersetz en
+            else
             {
                 WriteLine("Eingabe ungültig");
                 break;
@@ -104,8 +107,5 @@ class Gamemenu
         }
         
     }
-
-   
-    
 
 }
