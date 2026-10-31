@@ -4,7 +4,9 @@ class Gameloop
 {
 int Ergebnis {get; set;}
 public Player player = new();// Spielerobjekt erstellt // Neue Schreibweise
-
+public EventEssensuchen suche = new();
+public EventHosenSuche hose = new();
+public EventSchlafen schlafen = new();
 
 //Methoden
  public void Intro() // Die Einleitung ins Spiel
@@ -53,15 +55,15 @@ public Player player = new();// Spielerobjekt erstellt // Neue Schreibweise
                     switch(pick)
                     {
                     case (1):
-                            EventKlasse.Hosensuche(player);
+                            hose.Hosensuche(player);
                             break;
 
                     case (2):
-                            EventEssensuchen.EssenSuchen(player);
+                            suche.EssenSuchen(player);
                             break;
                         
                     case (3):
-                            EventSchlafen.Schlafen(player);
+                            schlafen.Schlafen(player);
                             break;
 
 

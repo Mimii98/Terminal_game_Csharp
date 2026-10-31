@@ -22,11 +22,16 @@ static class Hilfsklasse
         {
             
             WriteLine("Du bist gestorben");
-            WriteLine("Tage überlebt: {0}", player.Day); // hier soll das Ergebnis von daycount() übergeben werden
+            WriteLine("Tage überlebt: {0}", player.Day); 
 
 
 
         }
 
+    }
+    public static void Gewonnen()
+    {
+
+        
     }
 }

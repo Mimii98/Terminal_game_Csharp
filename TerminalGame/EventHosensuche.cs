@@ -1,10 +1,10 @@
 using static System.Console;
 
 
-static class EventKlasse
+class EventHosenSuche
 {
     
-    public static void Hosensuche(Player player)
+    public void Hosensuche(Player player)
     {
         //erst wird ein Zufallscase ausgewählt:
         Random rnd = new (); int wahl = rnd.Next(1,100);
@@ -36,9 +36,6 @@ static class EventKlasse
                 WriteLine("+ 5 Hunger");
                 Hilfsklasse.Status(player);
                 player.HatHose = false;
-                break;
-
-            default:
                 break;
 
 

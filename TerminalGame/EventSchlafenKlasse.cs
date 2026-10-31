@@ -1,8 +1,8 @@
 using static System.Console;
-static class EventSchlafen
+class EventSchlafen
 {
 
-    public static void Schlafen(Player player)
+    public void Schlafen(Player player)
    {
         Random rnd = new (); int wahl1 = rnd.Next(1,6);
 
@@ -51,9 +51,9 @@ static class EventSchlafen
                 System.Threading.Thread.Sleep(1000);
                 WriteLine("Es starrt dich an... Du starrst zurück");
                 WriteLine("Sieht ganz schön dumm aus, denkst du dir");
-                WriteLine("Du versuchst es zu verschieben, aber es bewegt sich nicht");
-                WriteLine("Da es die ganze Nacht komische Geräusche macht, kannst du schlecht schlafen");
-                WriteLine("Am nächsten Morgen wirst du von einer Wolke warmen Atems geweckt. Das Pferd starrt dich an und leckt dir quer durchs Gesicht");
+                WriteLine("Du versuchst es zu verschieben damit es dich nicht mehr anstarren kann, aber es bewegt sich nicht also gibst du auf und versuchst du einfach zu schlafen.");
+                WriteLine("Da es aber die ganze Nacht komische Geräusche macht, kannst du schlecht schlafen");
+                WriteLine("Am nächsten Morgen wirst du von einer Wolke warmen Atems geweckt. Das Pferd schaut dir tief in die Augen und leckt dir quer durchs Gesicht");
                 Hilfsklasse.Zeilenumbruch();
                 WriteLine("+15 Energie -10 Hunger");
                 Hilfsklasse.NewHunger = player.HungerWert - 10;

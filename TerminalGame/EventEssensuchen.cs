@@ -1,10 +1,10 @@
 using static System.Console;
 
-static class EventEssensuchen
+class EventEssensuchen
 {
     
     
-    public static void EssenSuchen(Player player)
+    public void EssenSuchen(Player player)
         {
 
             Random rnd = new (); int wahl2 = rnd.Next(1,6);

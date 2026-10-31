@@ -2,7 +2,8 @@
 
 class Player
 {  
-    // Eigenschaften
+    // Eigenschaften ( Eigenschaften sind dauerhaft im Speicher und werden nicht direkt gelöscht wenn sie nicht mehr gebraucht wird wie Methodenvariablen)
+    // Jedenfalls solange das Objekt existiert :D
     public int HungerWert { get; set; } 
     public int EnergieWert { get; set; }
     public bool HatHose { get; set; }
